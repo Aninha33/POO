@@ -17,7 +17,6 @@ public class Computador extends Data {
 	public String toString() {
 		return "Nome: "+this.nome+
 				"\nMarca: " + this.marca+
-				"\nData: "+this.dia+","+this.mes+
-				","+this.ano;
+				"\nData: "+this.data;
 	}
 }
