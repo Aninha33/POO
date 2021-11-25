@@ -31,6 +31,9 @@ public class Soma implements IOperacoes{
 		public int getQuantidade() {
 			return Soma.instancias;
 		}
-		
+		public String toString() {
+			return "Nome: "+getNome()+", Resultado: "+getResultado()+", Instancias: "+getQuantidade()+"\n";
+		}
+
 
 }

@@ -31,5 +31,8 @@ public class Multiplicacao implements IOperacoes{
 	public int getQuantidade() {
 		return Multiplicacao.instancias;
 	}
+	public String toString() {
+		return "Nome: "+getNome()+", Resultado: "+getResultado()+", Instancias: "+getQuantidade()+"\n";
+	}
 	
 }

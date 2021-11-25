@@ -11,6 +11,16 @@ public class Divisao implements IOperacoes{
 		Divisao.instancias++;
 	}
 	
+	public float divisor(float n, float d) throws ArithmeticException {
+			float resultado=0;
+			if (d==0)
+				throw new ArithmeticException();
+			else
+				resultado=(float)n/d;
+				
+			return resultado;
+		}
+
 	public void setOperando1(float operando1) {
 		this.operando1 = operando1;
 	}
@@ -20,7 +30,14 @@ public class Divisao implements IOperacoes{
 	}
 	
 	public float getResultado() {
-		this.resultado = this.operando1 / this.operando2;
+		resultado = 0;
+		  try {		
+			  resultado = divisor(operando1,operando2);
+	        } catch ( ArithmeticException  e ){
+	                  System.out.println("Excecao: divisao por zero: " + e.getMessage() );
+	                  e.printStackTrace();
+	        }
+
 		return this.resultado;
 	}
 	
@@ -30,6 +47,10 @@ public class Divisao implements IOperacoes{
 	
 	public int getQuantidade() {
 		return Divisao.instancias;
+	}
+	
+	public String toString() {
+		return "Nome: "+getNome()+", Resultado: "+getResultado()+", Instancias: "+getQuantidade()+"\n";
 	}
 	
 }

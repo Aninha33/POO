@@ -31,5 +31,9 @@ public class Subtracao implements IOperacoes{
 	public int getQuantidade() {
 		return Subtracao.instancias;
 	}
+	public String toString() {
+		return "Nome: "+getNome()+", Resultado: "+getResultado()+", Instancias: "+getQuantidade()+"\n";
+	}
+
 
 }
